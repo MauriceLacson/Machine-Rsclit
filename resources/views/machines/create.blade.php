@@ -43,6 +43,7 @@
                     </label>
                     <input id="date_finished" name="date_finished" class="form-control" type="datetime-local" placeholder=""><br>
                 </div>
+                <div><input type="hidden" name="date_next_rsclit" value=""></div>
                 
                 <div>
                     <label for="work_week"><span class="labelSpan">Work Week</span>

@@ -15,7 +15,8 @@ class MachinesController extends Controller
      */
     public function index()
     {
-        //
+        $machines = Machine::all();
+        return view('machines.index', compact('machines'));
     }
 
     /**
@@ -42,6 +43,7 @@ class MachinesController extends Controller
             'package' => $request->get('package'),
             'date_started' => $request->get('date_started'),
             'date_finished' => $request->get('date_finished'),
+            'date_next_rsclit' => $request->get('date_next_rsclit'),
             'work_week' => $request->get('work_week')
         ));
         $machine->save();

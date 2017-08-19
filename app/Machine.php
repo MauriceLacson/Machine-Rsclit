@@ -12,6 +12,7 @@ class Machine extends Model
 		'package',
 		'date_started',
 		'date_finished',
+		'date_next_rsclit',
 		'work_week'
 	];
 

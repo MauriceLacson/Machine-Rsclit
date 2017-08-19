@@ -18,3 +18,4 @@ Route::get('/home', 'PagesController@home');
 
 Route::get('/create', 'MachinesController@create');
 Route::post('/create', 'MachinesController@store');
+Route::get('/index', 'MachinesController@index');
