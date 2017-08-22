@@ -20,7 +20,7 @@ class CreateMachinesTable extends Migration
             $table->string('package');
             $table->dateTime('date_started');
             $table->dateTime('date_finished');
-            $table->dateTime('date_next_rsclit')->nullable();
+            $table->date('date_next_rsclit')->nullable();
             $table->integer('work_week');
             $table->string('slug')->nullable();
             $table->string('user_id')->nullable();
