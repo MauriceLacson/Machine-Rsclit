@@ -6,6 +6,10 @@ use Illuminate\Http\Request;
 use App\Http\Requests\RsclitFormRequest;
 use App\Machine;
 use Carbon\Carbon;
+<<<<<<< HEAD
+=======
+
+>>>>>>> f89ba425cfcc6b3b2afb11b0a57767b207a63a4e
 class MachinesController extends Controller
 {
 
@@ -53,7 +57,11 @@ class MachinesController extends Controller
             'work_week' => $request->get('work_week')
         ));
         $dateFinished = new Carbon($machine[4]);
+<<<<<<< HEAD
         $machine['date_next_rsclit'] = $dateFinished->addHour(672);
+=======
+        $machine['date_next_rsclit'] = $dateFinished->addDays(28);
+>>>>>>> f89ba425cfcc6b3b2afb11b0a57767b207a63a4e
         $machine->save();
         return redirect('/create')->with('status', 'Your Routine SCLIT has been saved!');
     }
