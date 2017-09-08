@@ -4,7 +4,7 @@
 <div class="container">
 <div id="formDiv" class="form-group">
         
-            <form id="form1" class="" method="post">
+            <form id="form1" role="form" class="form-horizontal" method="post">
             @foreach ($errors->all() as $error)
                 <p class="alert alert-danger">{{ $error }}</p>
             @endforeach

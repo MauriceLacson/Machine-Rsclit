@@ -5,9 +5,15 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Http\Requests\RsclitFormRequest;
 use App\Machine;
-
+use Carbon\Carbon;
 class MachinesController extends Controller
 {
+
+    public function __construct()
+        {
+            config(['app.timezone' => 'Asia/Manila']);
+        }
+
     /**
      * Display a listing of the resource.
      *
@@ -46,6 +52,8 @@ class MachinesController extends Controller
             'date_next_rsclit' => $request->get('date_next_rsclit'),
             'work_week' => $request->get('work_week')
         ));
+        $dateFinished = new Carbon($machine[4]);
+        $machine['date_next_rsclit'] = $dateFinished->addHour(672);
         $machine->save();
         return redirect('/create')->with('status', 'Your Routine SCLIT has been saved!');
     }

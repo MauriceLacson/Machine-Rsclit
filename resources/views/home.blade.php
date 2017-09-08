@@ -1,5 +1,5 @@
 @extends('layouts.master')
-@section('title', 'Machines Status')
+@section('title', 'Machines Routine SCLIT')
 @section('content')
 	
 
